@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Overpass";
+  src: url(../assets/overpass/Overpass-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url(../assets/overpass/Overpass-Bold.ttf);
+  font-weight: 700;
+}
+
+$fs-text-s: calc(15 / 16) + rem;
+$fs-text-m: calc(16 / 16) + rem;
+
+$fs-title-s: calc(24 / 16) + rem;
+$fs-title-m: calc(28 / 16) + rem;

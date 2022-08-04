@@ -1,0 +1,26 @@
+/* Generic */
+@use '2.generic/normalize';
+@use '2.generic/box-sizing';
+
+/* Theme */
+@use '7.theme/theme-dark';
+
+/* Elements */
+@use '3.elements/body';
+@use '3.elements/headers';
+@use '3.elements/paragraphs';
+@use '3.elements/buttons';
+
+/* Objetcs */
+@use '4.object/card';
+
+/* Components */
+@use '5.componets/container';
+@use '5.componets/rating';
+
+/* Responsive */
+@use '6.responsive/tablet';
+@use '6.responsive/desktop';
+
+/* Utilities */
+@use '8.utilities/utilities';

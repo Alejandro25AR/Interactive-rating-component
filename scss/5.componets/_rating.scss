@@ -1,0 +1,107 @@
+@use "../1.settings/variables";
+.c-rating {
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    margin: variables.$spacing-l 0;
+  }
+
+  &__option {
+    & input {
+      display: none;
+    }
+    & label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: variables.$size-circle-mobile;
+      height: variables.$size-circle-mobile;
+
+      color: var(--color-text);
+      border-radius: 50%;
+      background-color: #D9D9D925;
+      background-color: var(--bg-circle);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .25),
+                  0 -3px 4px rgba(0, 0, 0, .25) inset,
+                  0 2px 4px rgba(255, 255, 255, .25) inset;
+      transition: transform .5s ease-out, 
+                  box-shadow .4s ease-out,
+                  background-color .5s ease-out,
+                  color .5s ease-out,
+                  tex;
+    }
+
+    & input[type=radio]:checked + label {
+      color: var(--color-title);
+      background-color: var(--accent-color);
+      box-shadow: 0 9px 5px rgba(7, 7, 7, 0.25),
+                  0 -3px 4px rgba(0, 0, 0, .50) inset,
+                  0 2px 4px rgba(255, 255, 255, 0.5) inset;
+      transform: translateY(-5px);
+    }
+  }
+
+  &__submit {
+    & input {
+      display: none;
+
+      &:disabled + label{
+        background-color: transparent;
+        border: 2px solid var(--accent-color);
+
+        &::after {
+          transform: translateY(-11rem);
+        }
+      }
+    }
+
+    & label {
+      display: block;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      padding: .8rem;
+      overflow: hidden;
+
+      font-weight: 700;
+      letter-spacing: 2px;
+  
+      color: var(--color-title);
+      border: 2px solid var(--accent-color);
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: color 1s ease, border 2s ease;
+
+      &::after {
+        content: '';
+        
+        width: 286px;
+        height: 286px;
+        
+        position: absolute;
+        top: -7rem;
+        left: -2px;
+        z-index: 1;
+        
+        border-radius: 200%;
+        background-color: var(--accent-color);
+        transition: transform 2s ease, background-color 2s ease;
+      }
+    }
+
+    & span {
+      position: relative; 
+      z-index: 2;
+    }
+  }
+
+  &__result{
+    display: inline-block;
+    padding: .45rem 1.5em;
+    margin: 1.5rem 0;
+
+    color:#5270dd;
+    border-radius: 2rem;
+    background-color: var(--bg-symbol);
+  }
+}

@@ -1,0 +1,80 @@
+@use "../1.settings/variables";
+
+@media screen and (min-width: 728px) {
+  body {
+    font-size: variables.$fs-text-m;
+  }
+  .o-card {
+    & {
+      width: variables.$width-card-desktop;
+      padding: variables.$spacing-xl;
+      border-radius: 2rem;
+    }
+
+    &__symbol {
+      width: variables.$size-circle-desktop;
+      height: variables.$size-circle-desktop;
+      margin-bottom: variables.$spacing-l;
+    }
+    &__title {
+      font-size: variables.$fs-title-m;
+      margin-bottom: variables.$spacing-m;
+    }
+
+    &__message {
+      line-height: 1.5rem;
+    }
+
+    &__animation {
+      left: -11%;
+      bottom: -125%;
+  
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .c-rating {
+    &__options {
+      margin-bottom: variables.$spacing-xl 0;
+    }
+
+    &__option {
+      & label {
+        width: variables.$size-circle-desktop;
+        height: variables.$size-circle-desktop;
+
+        font-size: variables.$fs-text-m;
+        font-weight: 700;
+      }
+    }
+
+    &__submit {
+      & input {
+        &:disabled + label::after {
+          transform: translateY(-12rem);
+        }
+      }
+
+      & label {
+        width: 100%;
+        padding: 1rem;
+
+        font-size: variables.$fs-text-m;
+      }
+
+      & label::after {
+        width: 346px;
+        height: 346px;
+
+        top: -10rem;
+      }
+    }
+    &__result{
+      padding: 1.1rem 2em;
+      margin: 2rem 0;
+  
+      color:#5270dd;
+    }
+  }
+}

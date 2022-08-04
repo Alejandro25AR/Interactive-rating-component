@@ -1,0 +1,62 @@
+@use "../1.settings/variables";
+
+.o-card {
+  & {
+    position: relative;
+    width: variables.$width-card-mobile;
+    padding: variables.$spacing-l;
+    overflow: hidden;
+  
+    background-color: var(--bg-card);
+    border-radius: variables.$size-radius;
+    border: 2px solid var(--accent-color);
+  }
+
+  &__animation {
+    content: '';
+    position: absolute;
+    left: -11%;
+    bottom: -115%;
+    z-index: 3;
+
+    display: block;
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+    background-color: var(--accent-color);
+  }
+
+  &__symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: variables.$size-circle-mobile;
+    height: variables.$size-circle-mobile;
+    margin-bottom: variables.$spacing-m;
+    
+    border-radius: 50%;
+    background-color: var(--bg-symbol);
+  }
+
+  &__title {
+    margin-bottom: variables.$spacing-s;
+
+    font-size: variables.$fs-title-s;
+    font-weight: 700;
+
+    color: var(--color-title);
+  }
+
+  &__message {
+    line-height: 1.5rem;
+    
+    color: var(--color-text);
+  }
+}
+
+@keyframes ascend {
+  100% {
+    transform: translateY(-210%);
+  }
+}

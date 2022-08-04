@@ -1,0 +1,39 @@
+@use "../1.settings/variables";
+
+@media screen and (min-width: 728px) {
+  .c-rating {
+    &__option {
+      & input:hover + label {
+        cursor: pointer;
+        color: var(--bg-card);
+        background-color: var(--bg-circle-hover);
+        box-shadow: 0 9px 4px rgba(7, 7, 7, 0.25),
+          0 -3px 4px rgba(0, 0, 0, 0.5) inset,
+          0 2px 4px rgba(255, 255, 255, 0.5) inset;
+        transform: translateY(-5px);
+      }
+    }
+
+    &__submit {
+      & input:disabled + label {
+        cursor: not-allowed;
+      }
+
+      & input:disabled + label:hover {
+        color: white;
+      }
+
+      &:hover label::after {
+        background-color: white;
+      }
+
+      &:hover label {
+        border: 2px solid white;
+      }
+
+      & input:hover + label {
+        color: var(--accent-color);
+      }
+    }
+  }
+}

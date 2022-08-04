@@ -1,0 +1,10 @@
+@use "../1.settings/variables";
+
+body {
+  height: 100vh;
+  margin: 0;
+
+  font-family: "Overpass";
+  font-size: variables.$fs-text-s;
+  letter-spacing: -.4px;
+}
