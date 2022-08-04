@@ -29,10 +29,10 @@ Users should be able to:
 ### Screenshot
 
 #### Solution of the challenge view on mobile, tablet and desktop devices
-![Solution of the challenge view on mobile, tablet and desktop devices](./screenshot/InteractiveRatingComponent.svg)
+![Solution of the challenge view on mobile, tablet and desktop devices](./screenshot/Interactive%20rating%20component.png)
 
 #### Active states of solution
-![Active states of solution](./screenshot/InteractiveRatingComponentActive.svg)
+![Active states of solution](./screenshot/InteractiveRatingComponentActive.png)
 
 ### Links
 
